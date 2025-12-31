@@ -13,11 +13,12 @@
             <div class="chat-messages p-4">
               <div class="chat-message-left pb-4">
                 <div class="me-5">
-                  <img
-                    src={{msg?.users?.avatar_url}}
-                    class="rounded-circle mr-1" alt="Sharon Doe" width="40" height="40">
-                  <div class="text-muted small text-nowrap mt-2">{{msg?.created_at | date: 'M/d/yy, h:mm a'}}</div>
-                </div>
+                <img
+                  [src]="msg?.users?.avatar_url"
+                  class="rounded-circle mr-1" alt="User Avatar" width="40" height="40">
+                <div class="text-muted small text-nowrap mt-2">{{msg?.created_at | date: 'M/d/yy, h:mm a'}}</div>
+              </div>
+
                 <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
                   <div class="font-weight-bold mb-1">{{msg?.users?.full_name}}</div>
                   {{msg?.text}}
